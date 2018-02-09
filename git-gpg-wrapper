@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'shellwords'
+require 'open3'
+
+params = ARGV.to_a
+if params[0] == "commit-tree"
+  params << "-S"
+end
+
+print IO.popen(["git"].concat(params), in: :in) { |io| io.read }
