@@ -1,6 +1,6 @@
 Introduction
 ============
-This is a wrapper to be used with gitx/gitx so that it will sign all
+This is a wrapper to be used with [gitx/gitx](https://github.com/gitx/gitx) so that it will sign all
 commits
 
 How to use
