@@ -7,5 +7,6 @@ if params[0] == "commit-tree"
   params << "-S"
 end
 
+params.unshift("git")
 
-print IO.popen(["git"].concat(params), in: :in) { |io| io.read }
+system params.map { |param| Shellwords.escape(param) }.join(" ")
